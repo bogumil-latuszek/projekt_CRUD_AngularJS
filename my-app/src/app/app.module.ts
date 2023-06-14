@@ -6,9 +6,15 @@ import { FunctionalityComponent } from './components/functionality/functionality
 import { TasksComponent } from './components/tasks/tasks.component';
 import { TasksService } from './services/tasks.service';
 import { RouterModule, Routes } from '@angular/router';
+import { FunctionalitiesComponent } from './components/functionalities/functionalities.component';
+import { HomeComponent } from './components/home/home.component';
+import { TaskComponent } from './components/task/task.component';
 
 const appRoutes: Routes =[
   {path: 'Tasks', component: TasksComponent},
+  {path: 'Functionalities', component: FunctionalitiesComponent},
+  {path: 'Home', component: HomeComponent},
+  {path: 'Task/:id', component:TaskComponent}
 ]
 
 
@@ -16,7 +22,9 @@ const appRoutes: Routes =[
   declarations: [
     AppComponent,
     FunctionalityComponent,
-    TasksComponent
+    TasksComponent,
+    FunctionalitiesComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

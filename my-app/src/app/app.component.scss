@@ -1,0 +1,32 @@
+.navbar {
+    display: flexbox;
+    background-color: rgb(8, 77, 114);
+}
+
+ul {
+    display: flex;
+}
+li{
+    display: block;
+    height: fit-content;
+    float: left;
+    width: fit-content;
+    color:rgb(255, 202, 202);
+}
+li:hover {
+    background-color: rgb(15, 120, 177);
+    color: rgb(255, 255, 255);
+}
+li a {
+    display: block;
+    height: fit-content;
+    text-align: center;
+    width: fit-content;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+}

@@ -1,6 +1,19 @@
-<p>tasks works!</p>
-<div *ngFor="let task of tasks">
-    <div>
-       task description: {{task.description}}
+<div class="tasks-container" *ngFor="let task of tasks">
+    <div class="task-container">
+        <div class="task-description">
+            <div>
+                task description: {{task.description}}
+            </div>
+            <div>
+                Functionality: 
+                <button >{{task.functionality}}</button>
+            </div>
+            <div>
+                status: {{task.status}}
+            </div>
+            <div>
+                <button routerLink="/Task/{{task.id}}">EDIT</button>
+            </div>
+         </div>
     </div>
 </div>
