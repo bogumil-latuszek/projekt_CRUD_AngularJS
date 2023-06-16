@@ -1,10 +1,14 @@
 <div class="functionality-list-container">
     <div class="functionality-list">
-        <div class="functionality">
-            user-interface
-        </div>
-        <div *ngFor="let task of tasksService.getTasksForFunctionality(1)">
-            <div> {{task.description}}</div>
+        <div class="functionality" *ngFor="let func of functionalities">
+            <div class="functionality-description">
+                user-interface
+            </div>
+            <div class="task-list">
+                <div class="task" *ngFor="let task of tasksService.getTasksForFunctionality(1)">
+                    <button>{{task.description}}</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
