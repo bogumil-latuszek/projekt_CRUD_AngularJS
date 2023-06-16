@@ -15,7 +15,7 @@ export class TaskComponent implements OnInit{
   constructor(private tasksService: TasksService, private route: ActivatedRoute){
   }
 
-  ngOnInit(){
+  ngOnInit():void {
     this.taskId = this.route.snapshot.params['id'];
     this.task = this.tasksService.tasks.find(x => x.id == this.taskId)
   }

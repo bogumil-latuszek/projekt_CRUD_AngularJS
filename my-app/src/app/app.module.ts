@@ -9,6 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FunctionalitiesComponent } from './components/functionalities/functionalities.component';
 import { HomeComponent } from './components/home/home.component';
 import { TaskComponent } from './components/task/task.component';
+import { FunctionalitiesService } from './services/functionalities.service';
 
 const appRoutes: Routes =[
   {path: 'Tasks', component: TasksComponent},
@@ -24,13 +25,14 @@ const appRoutes: Routes =[
     FunctionalityComponent,
     TasksComponent,
     FunctionalitiesComponent,
-    HomeComponent
+    HomeComponent,
+    TaskComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [TasksService],
+  providers: [TasksService, FunctionalitiesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -7,8 +7,19 @@ import { Injectable } from '@angular/core';
 */
 export class TasksService {
     tasks=[
-      {description:"fix issue #1", functionality:"user interface", status:"to do", id:0},
-      {description:"add unit tests to class #d4s5", functionality:"user interface", status:"doing", id:1},
-      {description:"fix issue #2", functionality:"user interface", status:"done", id:2}
+      {description:"fix issue #1", functionality:1, status:"todo", id:0},
+      {description:"fix issue #4", functionality:1, status:"done", id:3},
+      {description:"fix issue #5", functionality:1, status:"todo", id:4},
+      {description:"add unit tests to class #d4s5", functionality:1, status:"doing", id:1},
+      {description:"fix issue #2", functionality:1, status:"done", id:2}
     ]
+
+    public getTasksForFunctionality(Functionality: number){
+      return this.tasks.filter((task)=>{if(task.functionality == Functionality){
+         console.log("true");
+         return true;
+        }
+        return false;
+      })
+    }
 }

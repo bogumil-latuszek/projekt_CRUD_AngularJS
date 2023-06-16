@@ -1,19 +1,71 @@
-<div class="tasks-container" *ngFor="let task of tasks">
-    <div class="task-container">
-        <div class="task-description">
-            <div>
-                task description: {{task.description}}
-            </div>
-            <div>
-                Functionality: 
-                <button >{{task.functionality}}</button>
-            </div>
-            <div>
-                status: {{task.status}}
-            </div>
-            <div>
-                <button routerLink="/Task/{{task.id}}">EDIT</button>
-            </div>
-         </div>
+<div class="tasks-container">
+    <div class="canban-board">
+        <div class="canban-column" id="to-do" >
+            <div class="canban-column-description"><h3>TO DO</h3></div>
+            <ng-container  *ngFor="let task of tasks">
+                <div class="task-container" *ngIf="task.status == 'todo' ">
+                    <div class="task-description" >
+                        <div>
+                            task description: {{task.description}}
+                        </div>
+                        <div>
+                            Functionality: 
+                            <button >{{task.functionality}}</button>
+                        </div>
+                        <div>
+                            status: {{task.status}}
+                        </div>
+                        <div>
+                            <button routerLink="/Task/{{task.id}}">EDIT</button>
+                        </div>
+                     </div>
+                </div>
+            </ng-container>
+        </div>
+        <div class="canban-column" id="doing" >
+            <div class="canban-column-description"><h3>IN PROGRESS</h3></div>
+            <ng-container  *ngFor="let task of tasks">
+                <div class="task-container" *ngIf="task.status == 'doing' ">
+                    <div class="task-description" >
+                        <div>
+                            task description: {{task.description}}
+                        </div>
+                        <div>
+                            Functionality: 
+                            <button >{{task.functionality}}</button>
+                        </div>
+                        <div>
+                            status: {{task.status}}
+                        </div>
+                        <div>
+                            <button routerLink="/Task/{{task.id}}">EDIT</button>
+                        </div>
+                     </div>
+                </div>
+            </ng-container>
+        </div>
+        <div class="canban-column" id="done" >
+            <div class="canban-column-description"><h3>DONE</h3></div>
+            <ng-container  *ngFor="let task of tasks">
+                <div class="task-container" *ngIf="task.status == 'done' ">
+                    <div class="task-description" >
+                        <div>
+                            task description: {{task.description}}
+                        </div>
+                        <div>
+                            Functionality: 
+                            <button >{{task.functionality}}</button>
+                        </div>
+                        <div>
+                            status: {{task.status}}
+                        </div>
+                        <div>
+                            <button routerLink="/Task/{{task.id}}">EDIT</button>
+                        </div>
+                     </div>
+                </div>
+            </ng-container>
+        </div>
     </div>
 </div>
+

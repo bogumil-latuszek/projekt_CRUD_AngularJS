@@ -3,5 +3,8 @@
         <div class="functionality">
             user-interface
         </div>
+        <div *ngFor="let task of tasksService.getTasksForFunctionality(1)">
+            <div> {{task.description}}</div>
+        </div>
     </div>
 </div>
