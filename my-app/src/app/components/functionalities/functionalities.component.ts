@@ -16,4 +16,14 @@ export class FunctionalitiesComponent {
   ngOnInit(): void {
     this.functionalities = this.funcService.functionalities;
   }
+
+  public ToggleDisplay(element:any){
+    console.log("works ok")
+    if(element.style.display != "none"){
+      element.style.display="none";
+    }
+    else{
+      element.style.display="block";
+    }
+  }
 }

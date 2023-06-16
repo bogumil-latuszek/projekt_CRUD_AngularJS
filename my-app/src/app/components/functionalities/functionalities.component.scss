@@ -22,14 +22,35 @@
     padding: 10px;
 }
 .task {
+    margin-bottom: 5px;
     display: block;
     flex-direction: row;
+    width: 200px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .task-list {
-    display: flexbox;
+
+    display: none;
     width: fit-content
 }
 .functionality-description {
     display: block;
     width: 200px;
+}
+
+.toggle-button {
+    display: block;
+    height: fit-content;
+    width: fit-content;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.task button {
+    width: inherit;
+    height: inherit;
+    background-color: inherit;
+    color: inherit;
+    padding: 5px;
 }

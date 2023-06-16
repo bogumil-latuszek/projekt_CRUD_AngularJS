@@ -2,10 +2,11 @@
     <div class="functionality-list">
         <div class="functionality" *ngFor="let func of functionalities">
             <div class="functionality-description">
-                user-interface
+                description: {{func.description}}
             </div>
-            <div class="task-list">
-                <div class="task" *ngFor="let task of tasksService.getTasksForFunctionality(1)">
+            <button class="toggle-button" (click)="ToggleDisplay(taskList)" >See Assigned Tasks</button>
+            <div class="task-list" #taskList >
+                <div class="task" *ngFor="let task of tasksService.getTasksForFunctionality(func.id)">
                     <button>{{task.description}}</button>
                 </div>
             </div>
