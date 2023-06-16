@@ -1,15 +1,59 @@
-<div class="task-description">
-    <div>
-        task description: {{task.description}}
-    </div>
-    <div>
-        Functionality: 
-        <button >{{task.functionality}}</button>
-    </div>
-    <div>
-        status: {{task.status}}
-    </div>
-    <div>
-        <button routerLink="/Tasks" routerLinkActive="active">Confirm Changes</button>
-    </div>
- </div>
+
+<button routerLink="/Tasks" routerLinkActive="active">Go back</button>
+
+<!-- <div class="form">
+    <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+
+        <label for="description">Description:</label>
+        <input type="text" id="description" value="{{task.description}}"
+        name="description" ngModel required #fname="ngModel" >
+
+        <label for="dropdown-status">Status:</label>
+        <select id="dropdown-status" name="status" [ngModel]="defaultStatus">
+            <option value="todo">To Do</option>
+            <option value="doing">Doing</option>
+            <option value="done">Done</option>
+        </select>
+
+        <label for="dropdown-functionality">Functionality:</label>
+        <select id="dropdown-functionality" name="functionality" [ngModel]="defaultFunctionality">
+            <ng-container *ngFor="let func of funcService.functionalities">
+                <option value="{{func.id}}">{{func.description}}</option>
+            </ng-container>
+        </select>
+
+
+        <br>
+        <label for="form-inline">functionality: </label>
+        <div class="form-inline">
+            <label><input type="checkbox" value="1" name="Functionality" ngModel> 1</label>
+            <label><input type="checkbox" value="2" name="Functionality" ngModel> 2</label>
+            <label><input type="checkbox" value="3" name="Functionality" ngModel> 3</label>
+        </div>
+
+        <input type="submit" value="Submit" id="btn">
+    </form>
+</div>-->
+<div class="form">
+    <form  #myForm="ngForm">
+
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" [(ngModel)]="taskForm.description" required>
+
+        <label for="dropdown-status">Status:</label>
+        <select id="dropdown-status" name="status" [(ngModel)]="taskForm.status">
+            <option value="todo">To Do</option>
+            <option value="doing">Doing</option>
+            <option value="done">Done</option>
+        </select>
+
+        <label for="dropdown-functionality">Functionality:</label>
+        <select id="dropdown-functionality" name="functionality" [(ngModel)]="taskForm.functionality">
+            <ng-container *ngFor="let func of funcService.functionalities">
+                <option value="{{func.id}}">{{func.description}}</option>
+            </ng-container>
+        </select>
+        
+        <button (click)="onSubmit()" >Submit</button>
+    </form>
+</div>

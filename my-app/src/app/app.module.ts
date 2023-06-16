@@ -10,6 +10,7 @@ import { FunctionalitiesComponent } from './components/functionalities/functiona
 import { HomeComponent } from './components/home/home.component';
 import { TaskComponent } from './components/task/task.component';
 import { FunctionalitiesService } from './services/functionalities.service';
+import { FormsModule } from '@angular/forms';
 
 const appRoutes: Routes =[
   {path: 'Tasks', component: TasksComponent},
@@ -29,7 +30,9 @@ const appRoutes: Routes =[
     TaskComponent
   ],
   imports: [
+    
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [TasksService, FunctionalitiesService],

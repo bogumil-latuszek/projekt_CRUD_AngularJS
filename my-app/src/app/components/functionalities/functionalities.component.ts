@@ -18,8 +18,7 @@ export class FunctionalitiesComponent {
   }
 
   public ToggleDisplay(element:any){
-    console.log("works ok")
-    if(element.style.display != "none"){
+    if(element.style.display != 'none'){
       element.style.display="none";
     }
     else{
