@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FunctionalitiesService } from 'src/app/services/functionalities.service';
 import { TasksService } from 'src/app/services/tasks.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class TasksComponent implements OnInit{
 
   public tasks: any[] = []
 
-  constructor(private router: Router, public tasksService: TasksService){
+  constructor(public funcService: FunctionalitiesService, private router: Router, public tasksService: TasksService){
   }
 
   ngOnInit(): void {
