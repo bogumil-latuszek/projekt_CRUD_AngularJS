@@ -1,6 +1,6 @@
 <div class="functionality-list-container">
     <div class="functionality-list">
-        <div class="functionality" *ngFor="let func of functionalities">
+        <div class="functionality" *ngFor="let func of funcService.functionalities">
             <div class="functionality-description">
                 description: {{func.description}}
             </div>
@@ -9,6 +9,17 @@
                 <div class="task" *ngFor="let task of tasksService.getTasksForFunctionality(func.id)">
                     <button>{{task.description}}</button>
                 </div>
+            </div>
+            <div>
+                <button routerLink="/Functionality/{{func.id}}">EDIT</button>
+            </div>
+            <div>
+                <button (click)="DeleteFunctionality(func.id)">DELETE</button>
+            </div>
+        </div>
+        <div class="functionality">
+            <div class="functionality-description">
+                <button (click)="AddFunctionality()">Add Functionality</button>
             </div>
         </div>
     </div>

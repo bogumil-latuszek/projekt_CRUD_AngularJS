@@ -1,1 +1,9 @@
-<p>functionality works!</p>
+<button routerLink="/Functionalities" routerLinkActive="active">Go back</button>
+<div class="form">
+    <form  #myForm="ngForm">
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" [(ngModel)]="functionalityForm.description" required>
+
+        <button (click)="onSubmit()" >Submit</button>
+    </form>
+</div>

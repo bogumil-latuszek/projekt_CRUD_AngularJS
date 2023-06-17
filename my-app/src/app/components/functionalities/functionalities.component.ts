@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { FunctionalitiesService } from 'src/app/services/functionalities.service';
 import { TasksService } from 'src/app/services/tasks.service';
 
@@ -10,7 +11,7 @@ import { TasksService } from 'src/app/services/tasks.service';
 export class FunctionalitiesComponent {
   public functionalities: any[] = []
 
-  constructor(public funcService: FunctionalitiesService, public tasksService: TasksService){
+  constructor(private router: Router, public funcService: FunctionalitiesService, public tasksService: TasksService){
   }
 
   ngOnInit(): void {
@@ -25,4 +26,16 @@ export class FunctionalitiesComponent {
       element.style.display="block";
     }
   }
+
+  AddFunctionality(){
+    let newID = this.funcService.addFunctionality({description:"default description", id:0},)
+    this.router.navigateByUrl(`/Functionality/${newID}`);
+  }
+
+  DeleteFunctionality(ID: number){
+    this.funcService.deleteFunctionality(ID);
+    this.tasksService.deleteTasksWithFunctionality(ID)
+  }
+
+
 }

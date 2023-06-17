@@ -16,7 +16,8 @@ const appRoutes: Routes =[
   {path: 'Tasks', component: TasksComponent},
   {path: 'Functionalities', component: FunctionalitiesComponent},
   {path: 'Home', component: HomeComponent},
-  {path: 'Task/:id', component:TaskComponent}
+  {path: 'Task/:id', component:TaskComponent},
+  {path: 'Functionality/:id', component:FunctionalityComponent}
 ]
 
 

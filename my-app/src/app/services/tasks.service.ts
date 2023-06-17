@@ -53,4 +53,14 @@ export class TasksService {
       });
       this.tasks = reducedTasks;
     }
+
+    public deleteTasksWithFunctionality(funcId: number){
+      let reducedTasks: any[] = []
+      this.tasks.forEach(task => {
+        if(!(task.functionality == funcId)){
+          reducedTasks.push(task);
+        }
+      });
+      this.tasks = reducedTasks;
+    }
 }
