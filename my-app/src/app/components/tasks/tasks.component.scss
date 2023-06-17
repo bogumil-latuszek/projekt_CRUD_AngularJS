@@ -49,3 +49,26 @@
 
     background-color: gray;
 }
+
+.task-attribute {
+    background-color: rgb(220, 242, 255);
+    display: inline;
+    border: 1px solid #CCCCCC;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px
+}
+
+.task-attribute-description {
+    max-width: 300px;
+    display: block;
+    border: 1px solid #dfdfdf;
+    padding: 5px;
+    margin: 5px;
+}
+
+.task-attribute-container {
+    display: block;
+    padding: 5px;
+    margin: 5px;
+}

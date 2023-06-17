@@ -45,6 +45,7 @@
     width: fit-content;
     margin-left: 10px;
     margin-right: 10px;
+    margin-top: 5px;
 }
 
 .task button {
@@ -53,4 +54,23 @@
     background-color: inherit;
     color: inherit;
     padding: 5px;
+}
+
+.functionality-attribute {
+    background-color: rgb(220, 242, 255);
+    display: inline;
+    border: 1px solid #CCCCCC;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px
+}
+
+.functionality-attribute-container {
+    display: block;
+    padding: 5px;
+}
+
+.small-container button{
+    display: block;
+    margin: 5px;
 }

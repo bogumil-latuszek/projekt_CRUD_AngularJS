@@ -5,15 +5,15 @@
             <ng-container  *ngFor="let task of tasksService.tasks ">
                 <div class="task-container" *ngIf="task.status == 'todo' ">
                     <div class="task-description" >
-                        <div>
-                            task description: {{task.description}}
+                        <div class="task-attribute-container">
+                            task description: <div class="task-attribute-description">{{task.description}}</div>
                         </div>
-                        <div>
+                        <div class="task-attribute-container">
                             Functionality: 
-                            <button >{{funcService.getFunctionalityById(task.functionality).description}}</button>
+                            <div class="task-attribute">{{funcService.getFunctionalityById(task.functionality).description}}</div>
                         </div>
-                        <div>
-                            status: {{task.status}}
+                        <div class="task-attribute-container">
+                            status: <div class="task-attribute"> {{task.status}}</div>
                         </div>
                         <div>
                             <button routerLink="/Task/{{task.id}}">EDIT</button>
@@ -35,15 +35,15 @@
             <ng-container  *ngFor="let task of tasksService.tasks ">
                 <div class="task-container" *ngIf="task.status == 'doing' ">
                     <div class="task-description" >
-                        <div>
-                            task description: {{task.description}}
+                        <div class="task-attribute-container">
+                            task description: <div class="task-attribute-description">{{task.description}}</div>
                         </div>
-                        <div>
+                        <div class="task-attribute-container">
                             Functionality: 
-                            <button >{{funcService.getFunctionalityById(task.functionality).description}}</button>
+                            <div class="task-attribute">{{funcService.getFunctionalityById(task.functionality).description}}</div>
                         </div>
-                        <div>
-                            status: {{task.status}}
+                        <div class="task-attribute-container">
+                            status: <div class="task-attribute"> {{task.status}}</div>
                         </div>
                         <div>
                             <button routerLink="/Task/{{task.id}}">EDIT</button>
@@ -65,15 +65,15 @@
             <ng-container  *ngFor="let task of tasksService.tasks ">
                 <div class="task-container" *ngIf="task.status == 'done' ">
                     <div class="task-description" >
-                        <div>
-                            task description: {{task.description}}
+                        <div class="task-attribute-container">
+                            task description: <div class="task-attribute-description">{{task.description}}</div>
                         </div>
-                        <div>
+                        <div class="task-attribute-container">
                             Functionality: 
-                            <button >{{funcService.getFunctionalityById(task.functionality).description}}</button>
+                            <div class="task-attribute">{{funcService.getFunctionalityById(task.functionality).description}}</div>
                         </div>
-                        <div>
-                            status: {{task.status}}
+                        <div class="task-attribute-container">
+                            status: <div class="task-attribute"> {{task.status}}</div>
                         </div>
                         <div>
                             <button routerLink="/Task/{{task.id}}">EDIT</button>
